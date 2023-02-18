@@ -1,4 +1,9 @@
 {
   "test":"test",
-  "language":"English"
+  "language":"English",
+  "loading":"LOADING",
+  "toggle":"toggle",
+  "to-main":"Main",
+  "to-about":"About",
+  "not-found":"PAGE NOT FOUND"
 }

@@ -1,23 +1,26 @@
-@import 'reset';
-@import 'variables/global';
-@import 'themes/dark';
-@import 'themes/normal';
+@import "reset";
+@import "variables/global";
+@import "themes/dark";
+@import "themes/normal";
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-.app{
-  font-size: var(--font-m);
-  background: var(--bg-color);
-  color:var(--primary-color);
-  min-height: 100vh;
+
+.app {
+    font-size: var(--font-m);
+    background: var(--bg-color);
+    color: var(--primary-color);
+    min-height: 100vh;
 }
-.content-page{
-  display: flex;
+
+.content-page {
+    display: flex;
 }
-.page-wrapper{
-  flex-grow: 1;
-  padding: 20px;
+
+.page-wrapper {
+    flex-grow: 1;
+    padding: 20px;
 }
