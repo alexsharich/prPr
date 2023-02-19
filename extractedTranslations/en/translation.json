@@ -1,0 +1,12 @@
+{
+  "error-boundary": "error-boundary",
+  "language": "language",
+  "loading": "loading",
+  "not-found": "not-found",
+  "some-error": "some-error",
+  "throw-error": "throw-error",
+  "to-about": "to-about",
+  "to-main": "to-main",
+  "toggle": "toggle",
+  "update-page": "update-page"
+}

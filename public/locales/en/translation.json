@@ -5,5 +5,7 @@
   "toggle":"toggle",
   "to-main":"Main",
   "to-about":"About",
-  "not-found":"PAGE NOT FOUND"
+  "not-found":"PAGE NOT FOUND",
+  "throw-error":"throw-error",
+  "update-page":"update-page"
 }
