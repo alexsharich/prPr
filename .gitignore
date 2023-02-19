@@ -1,5 +1,5 @@
 /build
 node_modules
-.loki
-/extractedTranslations
+/loki
+extractedTranslations
 .vscode
