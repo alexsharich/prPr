@@ -7,5 +7,6 @@
   "to-about":"About",
   "not-found":"PAGE NOT FOUND",
   "throw-error":"throw-error",
-  "update-page":"update-page"
+  "update-page":"update-page",
+  "shortLang": "En"
 }
