@@ -9,5 +9,8 @@
   "throw-error":"ошибка баундэри",
   "update-page":"обновить страницу",
   "shortLang": "Ru",
-  "entry":"Войти"
+  "entry":"Войти",
+  "athorization Form":"Авторизация",
+  "bad user name or password":"Неправильный логин или пароль",
+  "exit":"Выйти"
 }

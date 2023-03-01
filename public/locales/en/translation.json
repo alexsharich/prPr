@@ -9,5 +9,8 @@
   "throw-error":"throw-error",
   "update-page":"update-page",
   "shortLang": "En",
-  "entry":"Entry"
+  "entry":"Entry",
+  "athorization Form":"Athorization Form",
+  "bad user name or password":"Bad user name or password",
+  "exit":"Exit"
 }

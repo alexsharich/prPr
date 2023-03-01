@@ -98,3 +98,9 @@ OutlineSizeXl.args = {
     theme: ButtonTheme.OUTLINE,
     size: ButtonSize.XL,
 };
+export const Disabled = Template.bind({});
+Disabled.args = {
+    children: 'text',
+    theme: ButtonTheme.OUTLINE,
+    disabled: true,
+};
