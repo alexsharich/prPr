@@ -16,12 +16,12 @@ const MainPage = () => {
     return (
         <div>
             {t('main page')}
-            <Input
+            {/* <Input
                 value={value}
                 // eslint-disable-next-line i18next/no-literal-string
                 placeholder="your text"
                 onChange={onChange}
-            />
+            /> */}
         </div>
     );
 };
