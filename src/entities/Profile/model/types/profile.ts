@@ -7,7 +7,7 @@ export interface Profile {
     currency: Currency
     country: Country
     city: string
-  username: string
+    username: string
     avatar: string
 }
 
