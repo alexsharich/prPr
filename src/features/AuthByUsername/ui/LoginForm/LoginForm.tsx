@@ -7,9 +7,6 @@ import {
     getLoginPassword,
 } from 'features/AuthByUsername/model/selectors/getLoginPassword/getLoginPassword';
 import {
-    getLoginState,
-} from 'features/AuthByUsername/model/selectors/getLoginState/getLoginState';
-import {
     getLoginUsername,
 } from 'features/AuthByUsername/model/selectors/getLoginUsername/getLoginUsername';
 
