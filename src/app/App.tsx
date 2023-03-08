@@ -7,7 +7,7 @@ import { Sidebar } from 'widgets/Sidebar';
 import 'shared/config/i18n/i18n';
 import { useDispatch } from 'react-redux';
 import { userActions } from 'entities/User';
-import { AppRouter } from './providers/router';
+import AppRouter from './providers/router';
 
 export const App = () => {
     const { theme } = useTheme();
