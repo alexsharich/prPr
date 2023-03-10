@@ -2,5 +2,10 @@
   "PROFILE":"Profile",
   "placeholder firstname":"Your firstname",
   "placeholder lastname":"Your lastname",
-  "edit":"Edit"
+  "edit":"Edit",
+  "incorrect-country":"incorrect-country",
+  "incorrect-age":"incorrect-age",
+  "incorrect-data":"incorrect-data",
+  "no-data":"no-data",
+  "server-error":"server-error"
 }

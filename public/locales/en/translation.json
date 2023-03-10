@@ -13,5 +13,8 @@
   "athorization Form":"Athorization Form",
   "bad user name or password":"Bad user name or password",
   "exit":"Exit",
-  "profile":"Profile"
+  "profile":"Profile",
+  "save":"save",
+  "edit":"edit",
+  "cancel":"cancel"
 }

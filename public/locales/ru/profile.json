@@ -2,5 +2,10 @@
   "PROFILE":"Профиль",
   "placeholder firstname":"Ваше имя",
   "placeholder lastname":"Ваша фамилия",
-  "edit":"Редактировать"
+  "edit":"Редактировать",
+  "incorrect-country":"Введите страну",
+  "incorrect-age":"Введите возраст",
+  "incorrect-data":"Некорректные данные",
+  "no-data":"Данные отсутствуют",
+  "server-error":"Ошибка сервера"
 }

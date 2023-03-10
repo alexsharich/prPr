@@ -13,5 +13,8 @@
   "athorization Form":"Авторизация",
   "bad user name or password":"Неправильный логин или пароль",
   "exit":"Выйти",
-  "profile":"Профайл"
+  "profile":"Профайл",
+  "save":"сохранить",
+  "edit":"редактировать",
+  "cancel":"отмена"
 }
