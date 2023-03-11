@@ -21,7 +21,9 @@ Profile,
 
           try {
               const response = await extra.api.put<Profile>('/profile', formData);
-
+              if (!response.data) {
+                  throw new Error();
+              }
               return response.data;
           } catch (err) {
               return rejectWithValue([ValidateProfileError.SERVER_ERROR]);
