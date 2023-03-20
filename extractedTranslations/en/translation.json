@@ -16,6 +16,7 @@
   "bad user name or password": "",
   "cancel": "cancel",
   "city": "city",
+  "comments": "comments",
   "country": "country",
   "currency": "currency",
   "decrement": "decrement",
@@ -53,5 +54,6 @@
   "username": "username",
   "your firstname": "your firstname",
   "your lastname": "your lastname",
-  "your name": "your name"
+  "your name": "your name",
+  "Комментарии отсутствуют": "Комментарии отсутствуют"
 }
