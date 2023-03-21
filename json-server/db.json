@@ -102,6 +102,18 @@
       "text": "some comment 3",
       "articleId": "1",
       "userId": "1"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "sdfsdg  hfgj gj",
+      "id": "804itRu"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "sdfsd fg3243353645 ",
+      "id": "--EfWQl"
     }
   ],
   "users": [
@@ -114,20 +126,34 @@
     },
     {
       "id": "2",
-      "username": "user",
+      "username": "admin111",
       "password": "123",
       "role": "USER",
       "avatar": "https://perspektiva-inva.ru/wp-content/uploads/2021/06/pic04178_01.jpg"
     }
   ],
-  "profile": {
-    "first": "jgh",
-    "lastname": "asf",
-    "age": 30,
-    "currency": "RUB",
-    "country": "Belarus",
-    "city": "Minsk",
-    "username": "admin213",
-    "avatar": "https://perspektiva-inva.ru/wp-content/uploads/2021/06/pic04178_01.jpg"
-  }
+  "profile": [
+    {
+      "id": "1",
+      "first": "jgh",
+      "lastname": "asf",
+      "age": 30,
+      "currency": "RUB",
+      "country": "Belarus",
+      "city": "Minsk",
+      "username": "admin213",
+      "avatar": "https://perspektiva-inva.ru/wp-content/uploads/2021/06/pic04178_01.jpg"
+    },
+    {
+      "id": "2",
+      "first": "NAAAAAME",
+      "lastname": "LAAAAASTNAME!!!",
+      "age": 32,
+      "currency": "RUB",
+      "country": "Russia",
+      "city": "Minsk",
+      "username": "admin111",
+      "avatar": "https://perspektiva-inva.ru/wp-content/uploads/2021/06/pic04178_01.jpg"
+    }
+  ]
 }
