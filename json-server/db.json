@@ -126,7 +126,7 @@
     },
     {
       "id": "2",
-      "username": "admin111",
+      "username": "user",
       "password": "123",
       "role": "USER",
       "avatar": "https://perspektiva-inva.ru/wp-content/uploads/2021/06/pic04178_01.jpg"
@@ -135,13 +135,13 @@
   "profile": [
     {
       "id": "1",
-      "first": "jgh",
+      "first": "admin name",
       "lastname": "asf",
       "age": 30,
       "currency": "RUB",
       "country": "Belarus",
       "city": "Minsk",
-      "username": "admin213",
+      "username": "admin MAIN",
       "avatar": "https://perspektiva-inva.ru/wp-content/uploads/2021/06/pic04178_01.jpg"
     },
     {
@@ -152,7 +152,7 @@
       "currency": "RUB",
       "country": "Russia",
       "city": "Minsk",
-      "username": "admin111",
+      "username": "user",
       "avatar": "https://perspektiva-inva.ru/wp-content/uploads/2021/06/pic04178_01.jpg"
     }
   ]
