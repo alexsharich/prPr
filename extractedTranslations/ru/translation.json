@@ -43,6 +43,7 @@
   "password": "password",
   "placeholder firstname": "placeholder firstname",
   "placeholder lastname": "placeholder lastname",
+  "prev": "prev",
   "profile page": "profile page",
   "save": "save",
   "server-error": "server-error",
@@ -57,5 +58,12 @@
   "your firstname": "your firstname",
   "your lastname": "your lastname",
   "your name": "your name",
-  "Комментарии отсутствуют": "Комментарии отсутствуют"
+  "Комментарии отсутствуют": "Комментарии отсутствуют",
+  "Читать далее": {
+    "": {
+      "": {
+        "": ""
+      }
+    }
+  }
 }
