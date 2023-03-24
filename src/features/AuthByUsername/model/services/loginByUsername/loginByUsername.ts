@@ -1,7 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { ThunkConfig } from 'app/providers/StoreProvider';
-import { ThunkExtraArg } from 'app/providers/StoreProvider/config/StateSchema';
-import axios from 'axios';
 import { User, userActions } from 'entities/User';
 import { USER_LOCALSTORAGE_KEY } from 'shared/const/localStorage';
 
@@ -9,10 +7,6 @@ interface LoginByUsernameProps {
   username:string
   password:string
 }
-/* enum LoginError {
-  INCORRECT_DATA:;
-  SERVER_ERROR:;
-} */
 
 export const loginByUsername = createAsyncThunk<User, LoginByUsernameProps, ThunkConfig<string>>(
     'login/loginByUsername',

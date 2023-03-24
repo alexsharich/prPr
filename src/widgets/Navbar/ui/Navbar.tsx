@@ -6,11 +6,10 @@ import { useTranslation } from 'react-i18next';
 import { useDispatch, useSelector } from 'react-redux';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
-import { Modal } from 'shared/ui/Modal/Modal';
 import cls from './Navbar.module.scss';
 
 interface NavbarProps {
-  className?: string
+    className?: string;
 }
 
 export const Navbar = memo(({ className }: NavbarProps) => {
@@ -32,11 +31,7 @@ export const Navbar = memo(({ className }: NavbarProps) => {
     if (authData) {
         return (
             <div className={classNames(cls.navbar, {}, [className])}>
-                <Button
-                    theme={ButtonTheme.CLERA_INVERTED}
-                    className={cls.links}
-                    onClick={onLogout}
-                >
+                <Button theme={ButtonTheme.CLERA_INVERTED} className={cls.links} onClick={onLogout}>
                     {t('exit')}
                 </Button>
             </div>
@@ -45,11 +40,7 @@ export const Navbar = memo(({ className }: NavbarProps) => {
 
     return (
         <div className={classNames(cls.navbar, {}, [className])}>
-            <Button
-                theme={ButtonTheme.CLERA_INVERTED}
-                className={cls.links}
-                onClick={onShowModal}
-            >
+            <Button theme={ButtonTheme.CLERA_INVERTED} className={cls.links} onClick={onShowModal}>
                 {t('entry')}
             </Button>
             {isAuthModal && <LoginModal isOpen={isAuthModal} onClose={onCloseModal} />}
