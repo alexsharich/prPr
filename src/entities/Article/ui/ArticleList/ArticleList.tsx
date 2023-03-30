@@ -8,7 +8,7 @@ import { Article, ArticleView } from '../../model/types/article';
 
 interface ArticleListProps {
     className?: string;
-    articles: Article[];
+    articles: Article[]
     isLoading?: boolean;
     view?: ArticleView;
 }
@@ -21,17 +21,27 @@ const getSkeletons = (view: ArticleView) => new Array(view === ArticleView.SMALL
 
 export const ArticleList = memo((props: ArticleListProps) => {
     const {
-        className, articles, view = ArticleView.SMALL, isLoading,
+        className,
+        articles,
+        view = ArticleView.SMALL,
+        isLoading,
     } = props;
     const { t } = useTranslation();
 
     const renderArticle = (article: Article) => (
-        <ArticleListItem article={article} view={view} className={cls.card} key={article.id} />
+        <ArticleListItem
+            article={article}
+            view={view}
+            className={cls.card}
+            key={article.id}
+        />
     );
 
     return (
         <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
-            {articles.length > 0 ? articles.map(renderArticle) : null}
+            {articles.length > 0
+                ? articles.map(renderArticle)
+                : null}
             {isLoading && getSkeletons(view)}
         </div>
     );
