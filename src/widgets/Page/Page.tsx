@@ -1,6 +1,7 @@
 import { classNames } from 'shared/lib/classNames/classNames';
-// eslint-disable-next-line object-curly-newline
-import { memo, MutableRefObject, ReactNode, UIEvent, useRef } from 'react';
+import {
+    memo, MutableRefObject, ReactNode, UIEvent, useRef,
+} from 'react';
 import { useInfiniteScroll } from 'shared/lib/hooks/useInfiniteScroll/useInfiniteScroll';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { getUIScrollByPath, uiActions } from 'features/UI';
@@ -51,7 +52,7 @@ export const Page = memo((props: PageProps) => {
             onScroll={onScroll}
         >
             {children}
-            <div ref={triggerRef} />
+            {onScrollEnd ? <div className={cls.trigger} ref={triggerRef} /> : null}
         </section>
     );
 });
