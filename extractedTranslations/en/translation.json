@@ -6,6 +6,7 @@
   "Comment text": "Comment text",
   "EDIT": "EDIT",
   "PROFILE": "PROFILE",
+  "Recommendations": "Recommendations",
   "Send": "Send",
   "Some error text": "Some error text",
   "about page": "about page",
@@ -70,7 +71,9 @@
   "Произошла ошибка при загрузке статьи": {
     "": ""
   },
+  "Рекомендуем": "Рекомендуем",
   "Сортировать ПО": "Сортировать ПО",
+  "Статьи не найдены": "Статьи не найдены",
   "Статья не найдена": "Статья не найдена",
   "Читать далее": {
     "": {
