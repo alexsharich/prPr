@@ -1,9 +1,8 @@
-/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { Text, TextSize, TextTheme } from 'shared/ui/Text/Text';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
-import { Text, TextSize, TextTheme } from './Text';
 
 export default {
     title: 'shared/Text',
@@ -13,60 +12,53 @@ export default {
     },
 } as ComponentMeta<typeof Text>;
 
-const Template:
-// eslint-disable-next-line react/jsx-props-no-spreading
+const Template: ComponentStory<typeof Text> = (args) => <Text {...args} />;
 
-ComponentStory<typeof Text> = (args) => <Text {...args} />;
-
-export const Normal = Template.bind({});
-Normal.args = {
-    text: 'Lorem ipsum text for stories',
-    title: 'Lorem ipsum title',
+export const Primary = Template.bind({});
+Primary.args = {
+    title: 'Title lorem ipsun',
+    text: 'Description Description Description Description',
 };
+
 export const Error = Template.bind({});
 Error.args = {
-    text: 'Lorem ipsum text for stories',
-    title: 'Lorem ipsum title',
+    title: 'Title lorem ipsun',
+    text: 'Description Description Description Description',
     theme: TextTheme.ERROR,
 };
 
-export const OnlyTitle = Template.bind({});
-OnlyTitle.args = {
-    title: 'Lorem ipsum title',
+export const onlyTitle = Template.bind({});
+onlyTitle.args = {
+    title: 'Title lorem ipsun',
 };
 
-export const OnlyText = Template.bind({});
-OnlyText.args = {
-    text: 'Lorem ipsum text for stories',
+export const onlyText = Template.bind({});
+onlyText.args = {
+    text: 'Description Description Description Description',
 };
 
-export const NormalDark = Template.bind({});
-NormalDark.args = {
-    text: 'Lorem ipsum text for stories',
-    title: 'Lorem ipsum title',
+export const PrimaryDark = Template.bind({});
+PrimaryDark.args = {
+    title: 'Title lorem ipsun',
+    text: 'Description Description Description Description',
 };
-NormalDark.decorators = [ThemeDecorator(Theme.DARK)];
+PrimaryDark.decorators = [ThemeDecorator(Theme.DARK)];
 
-export const OnlyTitleDark = Template.bind({});
-OnlyTitleDark.args = {
-    title: 'Lorem ipsum title',
+export const onlyTitleDark = Template.bind({});
+onlyTitleDark.args = {
+    title: 'Title lorem ipsun',
 };
-OnlyTitleDark.decorators = [ThemeDecorator(Theme.DARK)];
+onlyTitleDark.decorators = [ThemeDecorator(Theme.DARK)];
 
-export const OnlyTextDark = Template.bind({});
-OnlyTextDark.args = {
-    text: 'Lorem ipsum text for stories',
+export const onlyTextDark = Template.bind({});
+onlyTextDark.args = {
+    text: 'Description Description Description Description',
 };
-OnlyTextDark.decorators = [ThemeDecorator(Theme.DARK)];
-export const SizeM = Template.bind({});
-SizeM.args = {
-    text: 'Lorem ipsum text for stories',
-    title: 'Lorem ipsum title',
-    size: TextSize.M,
-};
+onlyTextDark.decorators = [ThemeDecorator(Theme.DARK)];
+
 export const SizeL = Template.bind({});
 SizeL.args = {
-    text: 'Lorem ipsum text for stories',
-    title: 'Lorem ipsum title',
+    title: 'Title lorem ipsun',
+    text: 'Description Description Description Description',
     size: TextSize.L,
 };
