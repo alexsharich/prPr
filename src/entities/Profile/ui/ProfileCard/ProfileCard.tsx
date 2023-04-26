@@ -1,6 +1,6 @@
 import { Country, CountrySelect } from 'entities/Country';
 import { Currency, CurrencySelect } from 'entities/Currency';
-import { Profile } from 'entities/Profile/model/types/profile';
+
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { classNames, Mods } from 'shared/lib/classNames/classNames';
@@ -9,21 +9,22 @@ import { Input } from 'shared/ui/Input/Input';
 import { Loader } from 'shared/ui/Loader/Loader';
 import { Text, TextAlign, TextTheme } from 'shared/ui/Text/Text';
 import cls from './ProfileCard.module.scss';
+import { Profile } from '../../model/types/profile';
 
 interface ProfileCardProps {
-  className?: string
-  data?:Profile
-  isLoading?:boolean
-  error?:string
-  readonly?:boolean
-  onChangeFirstname?:(value?:string)=>void
-  onChangeLastname?:(value?:string)=>void
-  onChangeCity?:(value?:string)=>void
-  onChangeAge?:(value?:string)=>void
-  onChangeUsername?:(value?:string)=>void
-  onChangeAvatar?:(value?:string)=>void
-  onChangeCurrency?:(currency:Currency)=>void
-  onChangeCountry?:(country:Country)=>void
+    className?: string;
+    data?: Profile;
+    isLoading?: boolean;
+    error?: string;
+    readonly?: boolean;
+    onChangeFirstname?: (value?: string) => void;
+    onChangeLastname?: (value?: string) => void;
+    onChangeCity?: (value?: string) => void;
+    onChangeAge?: (value?: string) => void;
+    onChangeUsername?: (value?: string) => void;
+    onChangeAvatar?: (value?: string) => void;
+    onChangeCurrency?: (currency: Currency) => void;
+    onChangeCountry?: (country: Country) => void;
 }
 
 export const ProfileCard = (props: ProfileCardProps) => {
@@ -53,7 +54,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
     }
     if (error) {
         return (
-            <div className={classNames(cls.profileCard, { }, [className, cls.error])}>
+            <div className={classNames(cls.profileCard, {}, [className, cls.error])}>
                 <Text
                     theme={TextTheme.ERROR}
                     title={t('Some error text')}
@@ -63,7 +64,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
             </div>
         );
     }
-    const mods:Mods = {
+    const mods: Mods = {
         [cls.editing]: !readonly,
     };
 

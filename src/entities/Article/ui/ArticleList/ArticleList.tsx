@@ -1,17 +1,17 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { HTMLAttributeAnchorTarget, memo } from 'react';
-import { ArticleListItemSkeleton } from 'entities/Article/ui/ArticleListItem/ArticleListItemSkeleton';
 import { Text, TextSize } from 'shared/ui/Text/Text';
 import { List, ListRowProps, WindowScroller } from 'react-virtualized';
 import { PAGE_ID } from 'widgets/Page/Page';
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
 import cls from './ArticleList.module.scss';
 import { Article, ArticleView } from '../../model/types/article';
+import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkeleton';
 
 interface ArticleListProps {
     className?: string;
-    articles: Article[]
+    articles: Article[];
     isLoading?: boolean;
     target?: HTMLAttributeAnchorTarget;
     view?: ArticleView;
@@ -25,11 +25,7 @@ const getSkeletons = (view: ArticleView) => new Array(view === ArticleView.SMALL
 
 export const ArticleList = memo((props: ArticleListProps) => {
     const {
-        className,
-        articles,
-        view = ArticleView.SMALL,
-        isLoading,
-        target,
+        className, articles, view = ArticleView.SMALL, isLoading, target,
     } = props;
     const { t } = useTranslation();
 
@@ -58,11 +54,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
         }
 
         return (
-            <div
-                key={key}
-                style={style}
-                className={cls.row}
-            >
+            <div key={key} style={style} className={cls.row}>
                 {items}
             </div>
         );
@@ -77,16 +69,9 @@ export const ArticleList = memo((props: ArticleListProps) => {
     }
 
     return (
-        <WindowScroller
-            scrollElement={document.getElementById(PAGE_ID) as Element}
-        >
+        <WindowScroller scrollElement={document.getElementById(PAGE_ID) as Element}>
             {({
-                height,
-                width,
-                registerChild,
-                onChildScroll,
-                isScrolling,
-                scrollTop,
+                height, width, registerChild, onChildScroll, isScrolling, scrollTop,
             }) => (
                 <div
                     ref={registerChild}
