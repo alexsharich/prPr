@@ -2,8 +2,7 @@ import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
-import { Article, ArticleBlockType, ArticleType } from '../../model/types/article';
-
+import { ArticleBlockType, ArticleType, Article } from '../../model/types/article';
 import { ArticleDetails } from './ArticleDetails';
 
 export default {
@@ -58,30 +57,24 @@ const article: Article = {
 
 export const Normal = Template.bind({});
 Normal.args = {};
-Normal.decorators = [
-    StoreDecorator({
-        articleDetails: {
-            data: article,
-        },
-    }),
-];
+Normal.decorators = [StoreDecorator({
+    articleDetails: {
+        data: article,
+    },
+})];
 
 export const Loading = Template.bind({});
 Loading.args = {};
-Loading.decorators = [
-    StoreDecorator({
-        articleDetails: {
-            isLoading: true,
-        },
-    }),
-];
+Loading.decorators = [StoreDecorator({
+    articleDetails: {
+        isLoading: true,
+    },
+})];
 
 export const Error = Template.bind({});
 Error.args = {};
-Error.decorators = [
-    StoreDecorator({
-        articleDetails: {
-            error: 'error',
-        },
-    }),
-];
+Error.decorators = [StoreDecorator({
+    articleDetails: {
+        error: 'error',
+    },
+})];

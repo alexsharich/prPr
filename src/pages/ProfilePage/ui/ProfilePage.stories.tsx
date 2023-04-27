@@ -1,11 +1,10 @@
-/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
-import { Currency } from 'entities/Currency';
 import { Country } from 'entities/Country';
+import { Currency } from 'entities/Currency';
 import ProfilePage from './ProfilePage';
 
 export default {
@@ -16,42 +15,41 @@ export default {
     },
 } as ComponentMeta<typeof ProfilePage>;
 
-const Template:
-// eslint-disable-next-line react/jsx-props-no-spreading
-
-ComponentStory<typeof ProfilePage> = (args) => <ProfilePage {...args} />;
+const Template: ComponentStory<typeof ProfilePage> = (args) => <ProfilePage {...args} />;
 
 export const Normal = Template.bind({});
-Normal.args = {
-};
-Normal.decorators = [StoreDecorator({
-    profile: {
-        form: {
-            first: 'storybookr first',
-            lastname: 'storybookr lastname',
-            age: 32,
-            currency: Currency.EUR,
-            country: Country.BELARUS,
-            city: 'Minsk',
-            username: 'storybookr username',
+Normal.args = {};
+Normal.decorators = [
+    StoreDecorator({
+        profile: {
+            form: {
+                username: 'admin',
+                age: 22,
+                country: Country.BELARUS,
+                lastname: 'ulbi tv',
+                first: 'asd',
+                city: 'asf',
+                currency: Currency.USD,
+            },
         },
-    },
-})];
+    }),
+];
 
 export const Dark = Template.bind({});
-Dark.args = {
-
-};
-Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({
-    profile: {
-        form: {
-            first: 'storybookr first',
-            lastname: 'storybookr lastname',
-            age: 32,
-            currency: Currency.EUR,
-            country: Country.BELARUS,
-            city: 'Minsk',
-            username: 'storybookr username',
+Dark.args = {};
+Dark.decorators = [
+    ThemeDecorator(Theme.DARK),
+    StoreDecorator({
+        profile: {
+            form: {
+                username: 'admin',
+                age: 22,
+                country: Country.BELARUS,
+                lastname: 'ulbi tv',
+                first: 'asd',
+                city: 'asf',
+                currency: Currency.USD,
+            },
         },
-    },
-})];
+    }),
+];
