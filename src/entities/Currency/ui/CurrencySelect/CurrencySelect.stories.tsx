@@ -1,7 +1,5 @@
 import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { Theme } from 'app/providers/ThemeProvider';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { CurrencySelect } from './CurrencySelect';
 
 export default {
@@ -10,7 +8,6 @@ export default {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-
 } as ComponentMeta<typeof CurrencySelect>;
 
 const Template: ComponentStory<typeof CurrencySelect> = (args) => <CurrencySelect {...args} />;
