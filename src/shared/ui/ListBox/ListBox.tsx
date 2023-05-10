@@ -1,6 +1,7 @@
 import { Fragment, ReactNode, useState } from 'react';
 import { Listbox as HListBox } from '@headlessui/react';
 import { classNames, Mods } from 'shared/lib/classNames/classNames';
+import { DropdownDirection } from 'shared/types/ui';
 import { HStack } from '../Stack';
 import { Button } from '../Button/Button';
 import cls from './ListBox.module.scss';
@@ -10,8 +11,6 @@ export interface ListBoxItem {
     content: ReactNode;
     disabled?: boolean;
 }
-
-type DropdownDirection = 'top' | 'bottom';
 
 interface ListBoxProps {
     items?: ListBoxItem[];
@@ -25,8 +24,10 @@ interface ListBoxProps {
 }
 
 const mapDirectionClass: Record<DropdownDirection, string> = {
-    bottom: cls.optionsBottom,
-    top: cls.optionsTop,
+    'bottom left': cls.optionsBottomLeft,
+    'bottom right': cls.optionsBottomRight,
+    'top left': cls.optionsTopLeft,
+    'top right': cls.optionsTopRight,
 };
 
 export function ListBox(props: ListBoxProps) {
@@ -37,7 +38,7 @@ export function ListBox(props: ListBoxProps) {
         defaultValue,
         onChange,
         readonly,
-        direction = 'bottom',
+        direction = 'bottom right',
         label,
     } = props;
 
@@ -54,9 +55,7 @@ export function ListBox(props: ListBoxProps) {
                 onChange={onChange}
             >
                 <HListBox.Button disabled={readonly} className={cls.trigger}>
-                    <Button disabled={readonly}>
-                        {value ?? defaultValue}
-                    </Button>
+                    <Button disabled={readonly}>{value ?? defaultValue}</Button>
                 </HListBox.Button>
                 <HListBox.Options className={classNames(cls.options, {}, optionsClasses)}>
                     {items?.map((item) => (
@@ -68,13 +67,10 @@ export function ListBox(props: ListBoxProps) {
                         >
                             {({ active, selected }) => (
                                 <li
-                                    className={classNames(
-                                        cls.item,
-                                        {
-                                            [cls.active]: active,
-                                            [cls.disabled]: item.disabled,
-                                        },
-                                    )}
+                                    className={classNames(cls.item, {
+                                        [cls.active]: active,
+                                        [cls.disabled]: item.disabled,
+                                    })}
                                 >
                                     {selected && '!!!'}
                                     {item.content}
