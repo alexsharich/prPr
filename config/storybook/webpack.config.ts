@@ -1,6 +1,5 @@
-import webpack, { DefinePlugin } from 'webpack';
+import webpack, { DefinePlugin, RuleSetRule } from 'webpack';
 import path from 'path';
-import { RuleSetRule } from 'webpack/types';
 import { buildCssLoader } from '../build/loaders/buildCssLoader';
 import { BuildPaths } from '../build/types/config';
 
@@ -10,12 +9,15 @@ export default ({ config }: {config: webpack.Configuration}) => {
         html: '',
         entry: '',
         src: path.resolve(__dirname, '..', '..', 'src'),
+        locales: '',
+        buildLocales: '',
     };
     config!.resolve!.modules!.push(paths.src);
     config!.resolve!.extensions!.push('.ts', '.tsx');
 
+    // eslint-disable-next-line no-param-reassign
     // @ts-ignore
-    config!.module!.rules = config!.module!.rules!.map((rule: RuleSetRule) => {
+    config!.module!.rules = config.module!.rules!.map((rule: RuleSetRule) => {
         if (/svg/.test(rule.test as string)) {
             return { ...rule, exclude: /\.svg$/i };
         }
@@ -34,5 +36,6 @@ export default ({ config }: {config: webpack.Configuration}) => {
         __API__: JSON.stringify(''),
         __PROJECT__: JSON.stringify('storybook'),
     }));
+
     return config;
 };

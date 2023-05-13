@@ -1,36 +1,10 @@
 import { classNames } from 'shared/lib/classNames/classNames';
-import { useTranslation } from 'react-i18next';
-import {
-    DynamicModuleLoader,
-    ReducersList,
-} from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
-import {
-    fetchProfileData,
-    getProfileError,
-    getProfileForm,
-    getProfileIsLoading,
-    getProfileReadonly,
-    getProfileValidateErrors,
-    profileActions,
-    ProfileCard,
-    profileReducer,
-    ValidateProfileError,
-} from 'entities/Profile';
-import { useCallback, useEffect } from 'react';
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { useSelector } from 'react-redux';
-import { Currency } from 'entities/Currency';
-import { Country } from 'entities/Country';
-import { Text, TextTheme } from 'shared/ui/Text/Text';
-import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
-import { useParams } from 'react-router-dom';
 import { Page } from 'widgets/Page/Page';
 import { VStack } from 'shared/ui/Stack/VStack/VStack';
-import { ProfilePageHeader } from './ProfilePageHeader/ProfilePageHeader';
-
-const reducers: ReducersList = {
-    profile: profileReducer,
-};
+import { EditableProfileCard } from 'features/editableProfileCard';
+import { useParams } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import { Text } from 'shared/ui/Text/Text';
 
 interface ProfilePageProps {
     className?: string;
@@ -38,7 +12,9 @@ interface ProfilePageProps {
 
 const ProfilePage = ({ className }: ProfilePageProps) => {
     const { t } = useTranslation('profile');
-    const dispatch = useAppDispatch();
+    const { id } = useParams<{ id: string }>();
+    /*   const { t } = useTranslation('profile'); */
+    /* const dispatch = useAppDispatch();
     const formData = useSelector(getProfileForm);
     const isLoading = useSelector(getProfileIsLoading);
     const error = useSelector(getProfileError);
@@ -114,14 +90,16 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
             dispatch(profileActions.updateProfile({ country }));
         },
         [dispatch],
-    );
+    ); */
+    if (!id) {
+        return <Text text={t('Profile not found')} />;
+    }
 
     return (
-        <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-            <Page className={classNames('', {}, [className])}>
-                <VStack gap="16" max>
-                    <ProfilePageHeader />
-                    {validateErrors?.length
+        <Page className={classNames('', {}, [className])}>
+            <VStack gap="16" max>
+                <EditableProfileCard id={id} />
+                {/* {validateErrors?.length
                         && validateErrors.map((err) => (
                             <Text
                                 key={err}
@@ -142,10 +120,9 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
                         onChangeAvatar={onChangeAvatar}
                         onChangeCurrency={onChangeCurrency}
                         onChangeCountry={onChangeCountry}
-                    />
-                </VStack>
-            </Page>
-        </DynamicModuleLoader>
+                    /> */}
+            </VStack>
+        </Page>
     );
 };
 

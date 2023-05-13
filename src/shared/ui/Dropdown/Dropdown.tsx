@@ -27,7 +27,9 @@ const mapDirectionClass: Record<DropdownDirection, string> = {
 };
 
 export function Dropdown(props: DropdownProps) {
-    const { className, trigger, items, direction = 'bottom left' } = props;
+    const {
+        className, trigger, items, direction = 'bottom left',
+    } = props;
 
     const menuClasses = [mapDirectionClass[direction]];
 
