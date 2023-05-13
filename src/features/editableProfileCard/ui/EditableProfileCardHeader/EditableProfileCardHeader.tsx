@@ -45,15 +45,30 @@ export const EditableProfileCardHeader = memo((props: EditableProfileCardHeaderP
             {canEdit && (
                 <div>
                     {readonly ? (
-                        <Button theme={ButtonTheme.OUTLINE} onClick={onEdit}>
+                        <Button
+                            // eslint-disable-next-line i18next/no-literal-string
+                            data-testid="EditableProfileCardHeader.EditButton"
+                            theme={ButtonTheme.OUTLINE}
+                            onClick={onEdit}
+                        >
                             {t('Редактировать')}
                         </Button>
                     ) : (
                         <HStack gap="8">
-                            <Button theme={ButtonTheme.OUTLINE_RED} onClick={onCancelEdit}>
+                            <Button
+                                // eslint-disable-next-line i18next/no-literal-string
+                                data-testid="EditableProfileCardHeader.CancelButton"
+                                theme={ButtonTheme.OUTLINE_RED}
+                                onClick={onCancelEdit}
+                            >
                                 {t('Отменить')}
                             </Button>
-                            <Button theme={ButtonTheme.OUTLINE} onClick={onSave}>
+                            <Button
+                                // eslint-disable-next-line i18next/no-literal-string
+                                data-testid="EditableProfileCardHeader.SaveButton"
+                                theme={ButtonTheme.OUTLINE}
+                                onClick={onSave}
+                            >
                                 {t('Сохранить')}
                             </Button>
                         </HStack>
