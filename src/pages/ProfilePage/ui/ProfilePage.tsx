@@ -11,7 +11,6 @@ interface ProfilePageProps {
 }
 
 const ProfilePage = ({ className }: ProfilePageProps) => {
-    const { t } = useTranslation('profile');
     const { id } = useParams<{ id: string }>();
     /*   const { t } = useTranslation('profile'); */
     /* const dispatch = useAppDispatch();
@@ -91,9 +90,9 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
         },
         [dispatch],
     ); */
-    if (!id) {
+    /* if (!id) {
         return <Text text={t('Profile not found')} />;
-    }
+    } */
 
     return (
         <Page className={classNames('', {}, [className])}>
