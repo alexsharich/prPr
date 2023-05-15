@@ -4,14 +4,15 @@ import { HTMLAttributeAnchorTarget, memo } from 'react';
 import { Text, TextSize } from 'shared/ui/Text/Text';
 import { List, ListRowProps, WindowScroller } from 'react-virtualized';
 import { PAGE_ID } from 'widgets/Page/Page';
+import { ArticleView } from '../../model/consts/articleConsts';
+import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkeleton';
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
 import cls from './ArticleList.module.scss';
-import { Article, ArticleView } from '../../model/types/article';
-import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkeleton';
+import { Article } from '../../model/types/article';
 
 interface ArticleListProps {
     className?: string;
-    articles: Article[];
+    articles: Article[]
     isLoading?: boolean;
     target?: HTMLAttributeAnchorTarget;
     view?: ArticleView;
@@ -29,9 +30,9 @@ export const ArticleList = memo((props: ArticleListProps) => {
         className,
         articles,
         view = ArticleView.SMALL,
-        virtualized = true,
         isLoading,
         target,
+        virtualized = true,
     } = props;
     const { t } = useTranslation();
 
@@ -60,7 +61,11 @@ export const ArticleList = memo((props: ArticleListProps) => {
         }
 
         return (
-            <div key={key} style={style} className={cls.row}>
+            <div
+                key={key}
+                style={style}
+                className={cls.row}
+            >
                 {items}
             </div>
         );
@@ -76,40 +81,48 @@ export const ArticleList = memo((props: ArticleListProps) => {
 
     return (
         // @ts-ignore
-        <WindowScroller scrollElement={document.getElementById(PAGE_ID) as Element}>
+        <WindowScroller
+            scrollElement={document.getElementById(PAGE_ID) as Element}
+        >
             {({
-                height, width, registerChild, onChildScroll, isScrolling, scrollTop,
+                height,
+                width,
+                registerChild,
+                onChildScroll,
+                isScrolling,
+                scrollTop,
             }) => (
                 <div
                     // @ts-ignore
                     ref={registerChild}
                     className={classNames(cls.ArticleList, {}, [className, cls[view]])}
                 >
-                    {virtualized ? (
-                        // @ts-ignore
-                        <List
-                            height={height ?? 700}
-                            rowCount={rowCount}
-                            rowHeight={isBig ? 700 : 330}
-                            rowRenderer={rowRender}
-                            width={width ? width - 80 : 700}
-                            autoHeight
-                            onScroll={onChildScroll}
-                            isScrolling={isScrolling}
-                            scrollTop={scrollTop}
-                        />
-                    ) : (
-                        articles.map((item) => (
-                            <ArticleListItem
-                                article={item}
-                                view={view}
-                                target={target}
-                                key={item.id}
-                                className={cls.card}
+                    {virtualized
+                        ? (
+                            // @ts-ignore
+                            <List
+                                height={height ?? 700}
+                                rowCount={rowCount}
+                                rowHeight={isBig ? 700 : 330}
+                                rowRenderer={rowRender}
+                                width={width ? width - 80 : 700}
+                                autoHeight
+                                onScroll={onChildScroll}
+                                isScrolling={isScrolling}
+                                scrollTop={scrollTop}
                             />
-                        ))
-                    )}
-
+                        )
+                        : (
+                            articles.map((item) => (
+                                <ArticleListItem
+                                    article={item}
+                                    view={view}
+                                    target={target}
+                                    key={item.id}
+                                    className={cls.card}
+                                />
+                            ))
+                        )}
                     {isLoading && getSkeletons(view)}
                 </div>
             )}
