@@ -10,5 +10,6 @@ interface OverlayProps {
 export const Overlay = memo((props: OverlayProps) => {
     const { className, onClick } = props;
 
+    // eslint-disable-next-line jsx-a11y/no-static-element-interactions
     return <div onClick={onClick} className={classNames(cls.Overlay, {}, [className])} />;
 });

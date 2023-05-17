@@ -102,8 +102,10 @@
     "webpack-dev-server": "^4.7.4"
   },
   "dependencies": {
+    "@react-spring/web": "^9.7.2",
     "@reduxjs/toolkit": "^1.8.0",
     "@types/circular-dependency-plugin": "^5.0.5",
+    "@use-gesture/react": "^10.2.26",
     "axios": "^0.26.1",
     "circular-dependency-plugin": "^5.2.2",
     "concurrently": "^7.6.0",
