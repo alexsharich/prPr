@@ -22,7 +22,9 @@ interface ArticleListItemProps {
 }
 
 export const ArticleListItem = memo((props: ArticleListItemProps) => {
-    const { className, article, view, target } = props;
+    const {
+        className, article, view, target,
+    } = props;
     const { t } = useTranslation();
 
     const types = <Text text={article.type.join(', ')} className={cls.types} />;
