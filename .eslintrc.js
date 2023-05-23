@@ -58,8 +58,8 @@ module.exports = {
         'no-undef': 'off',
         'react/no-array-index-key': 'off',
         'arrow-body-style': 'off',
-        /* 'ulbi-tv-plugin/path-checker': 'error', */
-        'alexandev444-plugin/path-checker': 'error',
+        /* 'ulbi-tv-plugin/path-checker': ['error',{alias: '@'}] */
+        'alexandev444-plugin/path-checker': ['error', { alias: '@' }],
     },
     globals: {
         __IS_DEV__: true,
