@@ -61,6 +61,12 @@ module.exports = {
         /*  'ulbi-tv-plugin/path-checker': ['error',{alias: '@'}],
         'ulbi-tv-plugin/public-api-imports': ['error',{alias: '@'}], */
         'alexandev444-plugin/path-checker': ['error', { alias: '@' }],
+        'alexandev444-plugin/layer-imports': ['error',
+            {
+                alias: '@',
+                ignoreImportPatterns: ['**/StoreProvider', '**/testing'],
+            },
+        ],
         'alexandev444-plugin/public-api-imports': ['error',
             {
                 alias: '@',
