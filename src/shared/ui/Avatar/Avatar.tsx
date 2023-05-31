@@ -14,7 +14,9 @@ interface AvatarProps {
     fallbackInverted?: boolean;
 }
 
-export const Avatar = ({ className, fallbackInverted, src, size = 100, alt }: AvatarProps) => {
+export const Avatar = ({
+    className, fallbackInverted, src, size = 100, alt,
+}: AvatarProps) => {
     const mods: Mods = {};
     const styles = useMemo<CSSProperties>(
         () => ({
