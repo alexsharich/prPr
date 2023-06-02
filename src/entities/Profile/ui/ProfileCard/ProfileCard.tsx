@@ -90,7 +90,6 @@ export const ProfileCard = (props: ProfileCardProps) => {
                 className={cls.input}
                 onChange={onChangeFirstname}
                 readonly={readonly}
-                // eslint-disable-next-line i18next/no-literal-string
                 data-testid="ProfileCard.firstname"
             />
             <Input
@@ -99,7 +98,6 @@ export const ProfileCard = (props: ProfileCardProps) => {
                 className={cls.input}
                 onChange={onChangeLastname}
                 readonly={readonly}
-                // eslint-disable-next-line i18next/no-literal-string
                 data-testid="ProfileCard.lastname"
             />
             <Input
