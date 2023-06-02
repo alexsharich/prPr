@@ -844,6 +844,20 @@
       "rate": 3,
       "feedback": "",
       "id": "bcPnbbZ"
+    },
+    {
+      "userId": "4",
+      "articleId": "1",
+      "rate": 4,
+      "feedback": "sdfsdfasd",
+      "id": "i6-6vof"
+    },
+    {
+      "userId": "4",
+      "articleId": "7",
+      "rate": 5,
+      "feedback": "sdfsdf",
+      "id": "xGNEdY1"
     }
   ],
   "profile-ratings": [
