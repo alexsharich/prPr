@@ -716,6 +716,7 @@
       ],
       "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
     },
+    
     {
       "id": "3",
       "username": "manager",
@@ -724,7 +725,16 @@
         "MANAGER"
       ],
       "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
-    }
+    },
+    {
+        "id": "4",
+        "username": "testuser",
+        "password": "123",
+        "roles": [
+          "TESTUSER"
+        ],
+        "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
+      }
   ],
   "profile": [
     {
@@ -746,9 +756,20 @@
       "currency": "EUR",
       "country": "BELARUS",
       "city": "Moscow",
-      "username": "ulbi tv",
+      "username": "alex",
       "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
-    }
+    },
+    {
+        "id": "4",
+        "first": "alex",
+        "lastname": "developerovich",
+        "age": 465,
+        "currency": "EUR",
+        "country": "BELARUS",
+        "city": "Moscow",
+        "username": "testUSER",
+        "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
+      }
   ],
   "article-ratings": [
     {
