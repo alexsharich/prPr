@@ -59,7 +59,12 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
         <DynamicModuleLoader removeAfterUnmount reducers={initialreducers}>
             <div className={classNames(cls.loginForm, {}, [className])}>
                 <Text title={t('athorization Form')} />
-                {error && <Text text={t('bad user name or password')} theme={TextTheme.ERROR} />}
+                {error && (
+                    <Text
+                        text={t('bad user name or password')}
+                        theme={TextTheme.ERROR}
+                    />
+                )}
                 <Input
                     autofocus
                     placeholder={t('email')}

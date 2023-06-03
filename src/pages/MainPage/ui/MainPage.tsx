@@ -10,7 +10,11 @@ const MainPage = () => {
     return (
         <Page data-testid="MainPage">
             {t('main page')}
-            <RatingCard title="How is article ?" feedbackTitle="Your opinion" hasFeedback />
+            <RatingCard
+                title="How is article ?"
+                feedbackTitle="Your opinion"
+                hasFeedback
+            />
         </Page>
     );
 };

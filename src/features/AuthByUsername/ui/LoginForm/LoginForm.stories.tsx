@@ -11,25 +11,31 @@ export default {
     },
 } as ComponentMeta<typeof LoginForm>;
 
-const Template:
-// eslint-disable-next-line react/jsx-props-no-spreading
+const Template: // eslint-disable-next-line react/jsx-props-no-spreading
 ComponentStory<typeof LoginForm> = (args) => <LoginForm {...args} />;
 
 export const Normal = Template.bind({});
-Normal.args = {
-};
-Normal.decorators = [StoreDecorator({
-    loginForm: { username: 'someLogin', password: 'somePassword' },
-})];
+Normal.args = {};
+Normal.decorators = [
+    StoreDecorator({
+        loginForm: { username: 'someLogin', password: 'somePassword' },
+    }),
+];
 export const WithError = Template.bind({});
-WithError.args = {
-};
-WithError.decorators = [StoreDecorator({
-    loginForm: { username: 'someLogin', password: 'somePassword', error: 'SOME ERROR' },
-})];
+WithError.args = {};
+WithError.decorators = [
+    StoreDecorator({
+        loginForm: {
+            username: 'someLogin',
+            password: 'somePassword',
+            error: 'SOME ERROR',
+        },
+    }),
+];
 export const Loading = Template.bind({});
-Loading.args = {
-};
-Loading.decorators = [StoreDecorator({
-    loginForm: { isLoading: true },
-})];
+Loading.args = {};
+Loading.decorators = [
+    StoreDecorator({
+        loginForm: { isLoading: true },
+    }),
+];

@@ -8,7 +8,8 @@ interface ThemeProviderProps {
     children: ReactNode;
 }
 
-const defaultTheme = (localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as Theme) || Theme.LIGHT;
+const defaultTheme =
+    (localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as Theme) || Theme.LIGHT;
 
 const ThemeProvider = (props: ThemeProviderProps) => {
     const { children, initialTheme } = props;
@@ -22,7 +23,11 @@ const ThemeProvider = (props: ThemeProviderProps) => {
         [theme],
     );
 
-    return <ThemeContext.Provider value={defaultProps}>{children}</ThemeContext.Provider>;
+    return (
+        <ThemeContext.Provider value={defaultProps}>
+            {children}
+        </ThemeContext.Provider>
+    );
 };
 
 export default ThemeProvider;

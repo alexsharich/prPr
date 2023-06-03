@@ -23,7 +23,13 @@ interface RatingCardProps {
 
 export const RatingCard = memo((props: RatingCardProps) => {
     const {
-        className, onAccept, feedbackTitle, hasFeedback, onCancel, title, rate = 0,
+        className,
+        onAccept,
+        feedbackTitle,
+        hasFeedback,
+        onCancel,
+        title,
+        rate = 0,
     } = props;
     const { t } = useTranslation();
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -64,10 +70,18 @@ export const RatingCard = memo((props: RatingCardProps) => {
     );
 
     return (
-        <Card data-testid="RatingCard" className={classNames('', {}, [className])} max>
+        <Card
+            data-testid="RatingCard"
+            className={classNames('', {}, [className])}
+            max
+        >
             <VStack align="center" gap="8" max>
                 <Text title={starsCount ? t('Thaks for rating') : title} />
-                <StarRating selectedStars={starsCount} size={40} onSelect={onSelectStars} />
+                <StarRating
+                    selectedStars={starsCount}
+                    size={40}
+                    onSelect={onSelectStars}
+                />
             </VStack>
             <BrowserView>
                 <Modal isOpen={isModalOpen} lazy>
@@ -81,7 +95,10 @@ export const RatingCard = memo((props: RatingCardProps) => {
                             >
                                 {t('Закрыть')}
                             </Button>
-                            <Button data-testid="RatingCard.Send" onClick={acceptHandle}>
+                            <Button
+                                data-testid="RatingCard.Send"
+                                onClick={acceptHandle}
+                            >
                                 {t('Отправить')}
                             </Button>
                         </HStack>
@@ -92,7 +109,11 @@ export const RatingCard = memo((props: RatingCardProps) => {
                 <Drawer isOpen={isModalOpen} lazy onClose={cancelHandle}>
                     <VStack gap="32">
                         {modalContent}
-                        <Button fullWidth onClick={acceptHandle} size={ButtonSize.L}>
+                        <Button
+                            fullWidth
+                            onClick={acceptHandle}
+                            size={ButtonSize.L}
+                        >
                             {t('Отправить')}
                         </Button>
                     </VStack>
