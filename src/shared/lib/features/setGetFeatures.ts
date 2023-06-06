@@ -2,7 +2,7 @@ import { FeatureFlags } from '@/shared/types/featureFlags';
 
 let featureFlags: FeatureFlags;
 
-export function setFeatureFlag(newFeatureFlag?: FeatureFlags) {
+export function setFeatureFlags(newFeatureFlag?: FeatureFlags) {
     if (newFeatureFlag) {
         featureFlags = newFeatureFlag;
     }
