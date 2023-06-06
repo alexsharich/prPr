@@ -50,7 +50,9 @@ module.exports = {
         'no-underscore-dangle': 'off',
         'i18next/no-literal-string': ['error',
             {
-                markupOnly: true, ignoreAttribute: ['as', 'border', 'data-testid', 'to', 'target', 'justify', 'align', 'direction', 'gap', 'role'],
+                markupOnly: true, ignoreAttribute: [
+                    'feature','as', 'border', 'data-testid', 'to', 'target', 'justify', 'align', 'direction', 'gap', 'role'
+                ],
             }],
         'max-len': ['error', {
             ignoreComments: true, code: 150,
