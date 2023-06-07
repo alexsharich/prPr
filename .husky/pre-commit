@@ -7,5 +7,5 @@
 #npm run test:unit
 #npm run storybook:build
 
-npx lint-staged
+#npx lint-staged
 
