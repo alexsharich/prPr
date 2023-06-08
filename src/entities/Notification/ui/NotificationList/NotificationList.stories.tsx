@@ -28,18 +28,21 @@ Normal.parameters = {
             response: [
                 {
                     id: '1',
-                    title: 'some title',
-                    description: 'some description',
+                    title: 'Уведомление',
+                    description:
+                        'Поставь лайк и оставь комментарий под Ulbi TV',
                 },
                 {
                     id: '2',
-                    title: 'some title 2',
-                    description: 'some description',
+                    title: 'Уведомление 2',
+                    description:
+                        'Поставь лайк и оставь комментарий под Ulbi TV',
                 },
                 {
                     id: '3',
-                    title: 'some title 3',
-                    description: 'some description',
+                    title: 'Уведомление 3',
+                    description:
+                        'Поставь лайк и оставь комментарий под Ulbi TV',
                 },
             ],
         },
