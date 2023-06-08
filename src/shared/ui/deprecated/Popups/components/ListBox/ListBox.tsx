@@ -25,6 +25,10 @@ interface ListBoxProps {
     label?: string;
 }
 
+/**
+ * Устарел, используем новые компоненты из папки redesigned
+ * @deprecated
+ */
 export function ListBox(props: ListBoxProps) {
     const {
         className,
