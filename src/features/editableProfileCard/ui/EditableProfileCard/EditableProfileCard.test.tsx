@@ -14,7 +14,7 @@ const profile: Profile = {
     lastname: 'admin',
     age: 465,
     currency: Currency.USD,
-    country: Country.BELARUS,
+    country: Country.Belarus,
     city: 'Moscow',
     username: 'admin213',
 };

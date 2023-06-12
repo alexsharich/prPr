@@ -8,7 +8,7 @@ import { ValidateProfileError } from '../consts/consts';
 const data = {
     username: 'admin',
     age: 22,
-    country: Country.JAPAN,
+    country: Country.Russia,
     lastname: 'ulbi tv',
     first: 'asd',
     city: 'asf',
